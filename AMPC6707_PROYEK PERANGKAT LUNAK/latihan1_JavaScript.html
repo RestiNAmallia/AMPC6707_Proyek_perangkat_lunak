@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+        <style>
+            th {
+                background-color: yellow;
+            }
+        </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>NO</th>
+            <th>NAMA</th>
+            <th>NIM</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Resti</td>
+            <td>1910131120002</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>yuli</td>
+            <td>1910131120001</td>
+        </tr>
+    </table>
+
+
+    <!--Soal Nomor 1-->
+    <p>Pada Tanggal berapa Hari Sumpah Pemuda</p>
+    <input type="radio" name="soal" value="a">
+    <label for="">20 Oktober </label><br>
+    <input type="radio" name="soal" value="b">
+    <label for="">28 Oktober </label><br>
+    <input type="radio" name="soal" value="c">
+    <label for="">1 Oktober </label><br>
+    <input type="radio" name="soal" value="d">
+    <label for="">3 Oktober </label><br>
+    
+
+    <!--Soal Nomor 2-->
+    <p>Siapakah Presiden Pertama Di Indonesia</p>
+    <input type="text" name="soal1" id="soal1"><br>
+    
+    <button id="cek_jawaban">Submit</button>
+
+    
+    <script>
+        document.getElementById("cek_jawaban").addEventListener("click", function(){
+
+            var jawaban = document.querySelector('input[name="soal"]:checked').value;
+            var jawaban2 = document.getElementById("soal1").value;
+            var skor = 0;
+
+            if(jawaban == "b"){
+                skor = skor + 50;
+            }
+
+            if(jawaban2.toLowerCase() == "soekarno"){
+                skor = skor + 50;
+            }
+
+            alert("Skor anda adalah : " + skor);
+
+        });
+
+    </script>
+
+</body>
+</html>
